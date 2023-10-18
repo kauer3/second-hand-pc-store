@@ -1,17 +1,24 @@
 :root {
     --text: #0d0d0d;
+    --text-opaque: #0d0d0da0;
     --background: #e3eded;
     --primary: #804800;
     --secondary: #cccccc;
+    --tertiary: #d7e1e1;
+    --quaternary: #d4d4ca;
     --accent: #12ccd9;
 }
 
+/*(
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #f2f2f2;
     --background: #121c1c;
     --primary: #ffc880;
     --secondary: #333333;
+    --tertiary: #192323;
+    --quaternary: #35362b;
     --accent: #26e0ed;
   }
 }
+*/

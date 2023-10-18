@@ -17,13 +17,19 @@
                 <div class="menu-icon">&#9776;</div>
             </div>
             <div class="menu">
-                <div class="menu-item">Home</div>
-                <div class="menu-item">About</div>
-                <div class="menu-item">Contact</div>
+                <div class="menu-item">Pre-built PCs</div>
+                <div class="menu-item">PC Parts</div>
+                <div class="menu-item">On Sale</div>
+                <div class="menu-item">Dell</div>
+                <div class="menu-item">Acer</div>
+                <div class="menu-item">Intel</div>
+                <div class="menu-item">AMD</div>
+                <div class="menu-item">Nvidia</div>
+                <div class="menu-item">About Us</div>
             </div>
         </div>
         <div class="logo-container">
-            <img src="Images/lark-logo.png" alt="LARK">
+        <span class="logo">LARK</span>
         </div>
         <div class="search-bar">
             <input type="text" class="search-input" placeholder="Search...">
