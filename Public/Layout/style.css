@@ -16,6 +16,8 @@ body {
 
 header {
     display: flex;
+    position: sticky;
+    top: 0;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -159,7 +161,6 @@ header {
     outline: none;
     padding: 0 40px 0 15px;
     border-radius: 10px;
-    /*background: none;*/
     background-color: var(--tertiary);
     border: 1px solid var(--secondary);
     transition: all 0.3s ease-in-out;
@@ -198,4 +199,20 @@ header {
     font-size: 24px;
     color: #333;
     cursor: pointer;
+}
+
+.banner {
+    height: 580px;
+    width: 100%;
+    background-color: var(--primary);
+    opacity: 1;
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, var(--primary) 18px), repeating-linear-gradient(#12ccd955, #12ccd9);
+}
+
+footer {
+    position: relative;
+    height: 380px;
+    width: 100vw;
+    bottom: 0;
+    background-color: var(--tertiary);
 }
