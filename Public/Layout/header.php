@@ -32,7 +32,7 @@
         <span class="logo">LARK</span>
         </div>
         <div class="search-bar">
-            <input type="text" class="search-input" placeholder="Search...">
+            <input type="text" class="search-input" placeholder="Search..." name="search">
             <i class="search-icon fa fa-search"></i>
         </div>
         <button class="login-button">Login</button>

@@ -3,7 +3,7 @@ include "Layout/header.php";
 ?>
 <div class="banner"></div>
 <div class="filter-container">
-    <div class="filter">
+    <form class="filter">
         <div class="filter-title text">Filter by:</div>
         <div class="filter-item">
             <div class="filter-item-content-item">
@@ -46,17 +46,16 @@ include "Layout/header.php";
         <div class="filter-item">
             <div class="filter-item-content-item">
                 <label class="text" for="MinPrice">Min Price</label>
-                <input type="range" name="MinPrice" id="MinPrice">
+                <input type="range" name="MinPrice" id="MinPrice" min="0" max="2000">
                 <span class="price text">$200.99</span>
             </div>
             <div class="filter-item-content-item">
                 <label class="text" for="MaxPrice">Max Price</label>
-                <input type="range" name="MaxPrice" id="MaxPrice">
+                <input type="range" name="MaxPrice" id="MaxPrice" min="30" max="2000">
                 <span class="price text">$2000.99</span>
             </div>
         </div>
-    </div>
-</div>
+    </form>
 </div>
 <?php
 include "Layout/footer.php";
