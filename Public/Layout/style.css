@@ -14,6 +14,10 @@ body {
     background-color: var(--background);
 }
 
+.text {
+    color: var(--text);
+}
+
 header {
     display: flex;
     position: sticky;
@@ -30,7 +34,6 @@ header {
 
 .menu-container {
     background-color: unset;
-    color: var(--text);
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -164,7 +167,6 @@ header {
     background-color: var(--tertiary);
     border: 1px solid var(--secondary);
     transition: all 0.3s ease-in-out;
-    color: var(--text);
     
 }
 
@@ -207,6 +209,49 @@ header {
     background-color: var(--primary);
     opacity: 1;
     background-image: repeating-radial-gradient(circle at 0 0, transparent 0, var(--primary) 18px), repeating-linear-gradient(#12ccd955, #12ccd9);
+}
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    padding: 30px 0;
+    background-color: var(--tertiary);
+}
+
+.filter-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    border: 1px solid #00000011;
+}
+
+.filter-item-content-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.filter-item-content-item > label {
+    font-size: 16px;
+}
+
+.filter-item-content-item > input[type="range"] {
+    max-width: 70px; 
+}
+
+.filter-item-content-item > .price {
+    font-size: 14px;
 }
 
 footer {

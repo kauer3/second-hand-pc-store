@@ -13,19 +13,19 @@
 <body>
     <header>
         <div class="menu-container">
-            <div class="menu-button">
+            <div class="menu-button text">
                 <div class="menu-icon">&#9776;</div>
             </div>
             <div class="menu">
-                <div class="menu-item">Pre-built PCs</div>
-                <div class="menu-item">PC Parts</div>
-                <div class="menu-item">On Sale</div>
-                <div class="menu-item">Dell</div>
-                <div class="menu-item">Acer</div>
-                <div class="menu-item">Intel</div>
-                <div class="menu-item">AMD</div>
-                <div class="menu-item">Nvidia</div>
-                <div class="menu-item">About Us</div>
+                <div class="menu-item text">Pre-built PCs</div>
+                <div class="menu-item text">PC Parts</div>
+                <div class="menu-item text">On Sale</div>
+                <div class="menu-item text">Dell</div>
+                <div class="menu-item text">Acer</div>
+                <div class="menu-item text">Intel</div>
+                <div class="menu-item text">AMD</div>
+                <div class="menu-item text">Nvidia</div>
+                <div class="menu-item text">About Us</div>
             </div>
         </div>
         <div class="logo-container">
