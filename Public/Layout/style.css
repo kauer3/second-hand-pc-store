@@ -232,7 +232,7 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: 5px;
-    border: 1px solid #00000011;
+    /* border: 1px solid #00000011; */
 }
 
 .filter-item-content-item {
