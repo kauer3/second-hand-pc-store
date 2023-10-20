@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="Layout/reset.css">
     <link rel="stylesheet" href="Layout/theme.css">
     <link rel="stylesheet" href="Layout/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" integrity="sha512-W/zrbCncQnky/EzL+/AYwTtosvrM+YG/V6piQLSe2HuKS6cmbw89kjYkp3tWFn1dkWV7L1ruvJyKbLz73Vlgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header>
         <div class="menu-container">
             <div class="menu-button text">
-                <div class="menu-icon">&#9776;</div>
+                <i class="menu-icon fa fa-bars"></i>
             </div>
             <div class="menu">
                 <div class="menu-item text">Pre-built PCs</div>
@@ -29,12 +31,14 @@
             </div>
         </div>
         <div class="logo-container">
-        <span class="logo">LARK</span>
+            <span class="logo">LARK</span>
         </div>
-        <div class="search-bar">
+        <form class="search-bar">
             <input type="text" class="search-input" placeholder="Search..." name="search">
-            <i class="search-icon fa fa-search"></i>
-        </div>
+            <button type="submit">
+                <i class="search-icon fa fa-search"></i>
+            </button>
+        </form>
         <button class="login-button">Login</button>
-        <div class="cart-icon">&#128722;</div>
+        <i class="cart-icon fa fa-cart-shopping"></i>
     </header>
