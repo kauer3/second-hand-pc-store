@@ -1,0 +1,170 @@
+.banner {
+    height: 580px;
+    width: 100%;
+    background-color: var(--primary);
+    opacity: 1;
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, var(--primary) 18px), repeating-linear-gradient(#12ccd955, #12ccd9);
+}
+
+.main-section {
+    display: inline-grid;
+    grid-template-columns: clamp(287px, 25vw, 315px) 1fr;
+    width: 100%;
+}
+
+.filter-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: clamp(287px, 25vw, 315px);
+    padding: 50px 5% 30px 10%;
+    background-color: var(--tertiary);
+    float: left;
+    box-shadow: 0 0 10px #00000066;
+}
+
+.filter-container > .filter {
+    position: sticky;
+    top: 75px;
+}
+
+.filter-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    max-width: max-content;
+    margin-bottom: 5px;
+}
+
+.filter-item-content-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.filter-item-content-item-grid {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: start;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+}
+
+.filter-item-content-item > label, .filter-item-content-item-grid > label {
+    font-size: 14px;
+}
+
+.filter-item-content-item-grid > .price {
+    font-size: 12px;
+}
+
+.filter-item-content-item-grid>input[type="range"] {
+    max-width: 70px;
+    /* -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;*/
+}
+
+/*
+.filter-item-content-item-grid>input[type="range"]::-webkit-slider-runnable-track,
+.filter-item-content-item-grid>input[type="range"]::-ms-track,
+.filter-item-content-item-grid>input[type="range"]::-moz-range-track {
+    background: var(--quaternary);
+    height: 15px;
+    border-radius: 15px;
+}
+
+.filter-item-content-item-grid>input[type="range"]::-webkit-slider-thumb,
+.filter-item-content-item-grid>input[type="range"]::-ms-thumb,
+.filter-item-content-item-grid>input[type="range"]::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    background-color: var(--accent);
+}
+*/
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 270px);
+    justify-content: center;
+    padding: 50px 15px; 
+    column-gap: 35px;
+    row-gap: 50px;
+    /* border: 1px solid var(--secondary); */
+}
+
+.products-grid > .product-card {
+    box-shadow: 0 0 15px #00000066;
+    border-radius: 15px;
+    height: 436px;
+    width: 270px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .4s ease-out;
+}
+
+.products-grid > .product-card:hover {
+    translate: 0 -10px;
+    scale: 1.05;
+    box-shadow: 0 10px 30px #00000066;
+}
+
+.products-grid > .product-card > .product-card-image {
+    height: 230px;
+    width: 100%;
+    background-size: cover;
+}
+
+.products-grid > .product-card > .product-card-image > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.products-grid > .product-card > .product-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    height: 206px;
+}
+
+.products-grid > .product-card > .product-card-content > .card-text> .product-card-title{
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.products-grid > .product-card > .product-card-content > .card-text> .product-card-price{
+    font-size: 14px;
+}
+
+.products-grid > .product-card > .product-card-content > .product-card-button {
+    align-self: center;
+    width: 159px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--quaternary);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.products-grid > .product-card > .product-card-content > .product-card-button:hover {
+    box-shadow: 0 0 10px #00000066;
+    scale: 1.05;
+}
