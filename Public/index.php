@@ -59,6 +59,114 @@ include "Layout/header.php";
         </form>
     </div>
     <main class="products-grid">
+        <div class="product-card" onclick="document.location.href='product.php'">
+            <div class="product-card-image">
+                <img src="https://picsum.photos/270/230" alt="product">
+            </div>
+            <div class="product-card-content">
+                <div class="card-text">
+                    <div class="product-card-title text">Product Title</div>
+                    <div class="product-card-price text">$200.99</div>
+                </div>
+                <button class="product-card-button text">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-card-image">
+                <img src="https://picsum.photos/270/230" alt="product">
+            </div>
+            <div class="product-card-content">
+                <div class="card-text">
+                    <div class="product-card-title text">Product Title</div>
+                    <div class="product-card-price text">$200.99</div>
+                </div>
+                <button class="product-card-button text">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-card-image">
+                <img src="https://picsum.photos/270/230" alt="product">
+            </div>
+            <div class="product-card-content">
+                <div class="card-text">
+                    <div class="product-card-title text">Product Title</div>
+                    <div class="product-card-price text">$200.99</div>
+                </div>
+                <button class="product-card-button text">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-card-image">
+                <img src="https://picsum.photos/270/230" alt="product">
+            </div>
+            <div class="product-card-content">
+                <div class="card-text">
+                    <div class="product-card-title text">Product Title</div>
+                    <div class="product-card-price text">$200.99</div>
+                </div>
+                <button class="product-card-button text">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-card-image">
+                <img src="https://picsum.photos/270/230" alt="product">
+            </div>
+            <div class="product-card-content">
+                <div class="card-text">
+                    <div class="product-card-title text">Product Title</div>
+                    <div class="product-card-price text">$200.99</div>
+                </div>
+                <button class="product-card-button text">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-card-image">
+                <img src="https://picsum.photos/270/230" alt="product">
+            </div>
+            <div class="product-card-content">
+                <div class="card-text">
+                    <div class="product-card-title text">Product Title</div>
+                    <div class="product-card-price text">$200.99</div>
+                </div>
+                <button class="product-card-button text">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-card-image">
+                <img src="https://picsum.photos/270/230" alt="product">
+            </div>
+            <div class="product-card-content">
+                <div class="card-text">
+                    <div class="product-card-title text">Product Title</div>
+                    <div class="product-card-price text">$200.99</div>
+                </div>
+                <button class="product-card-button text">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-card-image">
+                <img src="https://picsum.photos/270/230" alt="product">
+            </div>
+            <div class="product-card-content">
+                <div class="card-text">
+                    <div class="product-card-title text">Product Title</div>
+                    <div class="product-card-price text">$200.99</div>
+                </div>
+                <button class="product-card-button text">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-card-image">
+                <img src="https://picsum.photos/270/230" alt="product">
+            </div>
+            <div class="product-card-content">
+                <div class="card-text">
+                    <div class="product-card-title text">Product Title</div>
+                    <div class="product-card-price text">$200.99</div>
+                </div>
+                <button class="product-card-button text">Add to Cart</button>
+            </div>
+        </div>
         <div class="product-card">
             <div class="product-card-image">
                 <img src="https://picsum.photos/270/230" alt="product">
