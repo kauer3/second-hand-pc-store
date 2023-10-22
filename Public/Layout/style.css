@@ -83,6 +83,10 @@ header {
     font-size: 17px;
     font-weight: 400;
     transition: all .3s ease;
+}
+
+.menu > .menu-item,
+.form-container > .message > a {
     text-decoration: none;
 }
 
@@ -259,6 +263,7 @@ main.main-content:not(.unset-margin) {
 }
 
 .square-image-container > img {
+    background-color: var(--tertiary);
     aspect-ratio: 1/1;
     object-fit: cover;
     height: 100%;
