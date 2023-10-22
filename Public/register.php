@@ -11,11 +11,11 @@ include "Layout/header.php";
             </div>
             <div class="form-field">
                 <label for="password">Password</label>
-                <input type="text" id="password" name="password">
+                <input type="password" id="password" name="password">
             </div>
             <div class="form-field">
                 <label for="confirm-password">Confirm Password</label>
-                <input type="text" id="confirm-password" name="confirm-password">
+                <input type="password" id="confirm-password" name="confirm-password">
             </div>
             <div class="form-field">
                 <label for="phone">Phone</label>
@@ -25,7 +25,7 @@ include "Layout/header.php";
         <button type="submit">Register</button>
     </form>
     <span class="message">
-        Already have an account? <a>Log in here</a>.
+        Already have an account? <a href="login.php">Log in here</a>.
     </span>
 </main>
 <?php
