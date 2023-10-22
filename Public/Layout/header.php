@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LARK</title>
     <link rel="stylesheet" href="Layout/reset.css">
     <link rel="stylesheet" href="Layout/theme.css">
     <link rel="stylesheet" href="Layout/style.css">
     <link rel="stylesheet" href="Layout/index.css">
     <link rel="stylesheet" href="Layout/product.css">
+    <link rel="stylesheet" href="Layout/about.css">
+    <link rel="stylesheet" href="Layout/register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" integrity="sha512-W/zrbCncQnky/EzL+/AYwTtosvrM+YG/V6piQLSe2HuKS6cmbw89kjYkp3tWFn1dkWV7L1ruvJyKbLz73Vlgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -29,7 +31,7 @@
                 <div class="menu-item text">Intel</div>
                 <div class="menu-item text">AMD</div>
                 <div class="menu-item text">Nvidia</div>
-                <div class="menu-item text">About Us</div>
+                <a class="menu-item text" href="about.php">About Us</a>
             </div>
         </div>
         <div class="logo-container">
@@ -41,6 +43,6 @@
                 <i class="search-icon fa fa-search"></i>
             </button>
         </form>
-        <button class="login-button">Login</button>
+        <button class="login-button" onclick="document.location.href='register.php'">Login</button>
         <i class="cart-icon fa fa-cart-shopping"></i>
     </header>
