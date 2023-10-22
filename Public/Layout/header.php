@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="Layout/register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" integrity="sha512-W/zrbCncQnky/EzL+/AYwTtosvrM+YG/V6piQLSe2HuKS6cmbw89kjYkp3tWFn1dkWV7L1ruvJyKbLz73Vlgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="scroll.js"></script> 
 </head>
 
 <body>
@@ -35,7 +36,7 @@
             </div>
         </div>
         <div class="logo-container">
-            <span class="logo">LARK</span>
+            <span class="logo" onclick="document.location.href='index.php'">LARK</span>
         </div>
         <form class="search-bar">
             <input type="text" class="search-input" placeholder="Search..." name="search">
@@ -43,6 +44,6 @@
                 <i class="search-icon fa fa-search"></i>
             </button>
         </form>
-        <button class="login-button" onclick="document.location.href='register.php'">Login</button>
+        <button class="login-button" onclick="document.location.href='login.php'">Login</button>
         <i class="cart-icon fa fa-cart-shopping"></i>
     </header>
