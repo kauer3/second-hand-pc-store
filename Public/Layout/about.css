@@ -3,7 +3,7 @@
         translate: 0 0;
     }
     100% {
-        translate: -30% -30%;
+        translate: -35% -35%;
     }
 }
 
@@ -12,7 +12,7 @@
         translate: 0 0;
     }
     100% {
-        translate: 30% 30%;
+        translate: 35% 35%;
     }
 }
 
@@ -104,6 +104,19 @@
     width: 50px;
     border-radius: 50%;
     overflow: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+    .about-content-container {
+        flex-direction: column-reverse;
+    }
+
+    .about-content-container > .image-and-squares {
+        width: 80%;
+        margin-bottom: 15%;
+        align-self: center;
+    }
+
 }
 
 @media (prefers-color-scheme: dark) {

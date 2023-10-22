@@ -3,7 +3,7 @@ include "Layout/header.php";
 ?>
 <main class="main-content">
     <div class="about-content-and-title">
-        <h1 class="main-title">About Us</h1>
+        <h1 class="main-title text">About Us</h1>
         <div class="about-content-container">
             <div class="about-text paragraphs">
                 <p class="text">
