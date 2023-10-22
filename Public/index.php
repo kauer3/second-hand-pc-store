@@ -61,7 +61,7 @@ include "Layout/header.php";
     <main class="products-grid">
         <div class="product-card" onclick="document.location.href='product.php'">
             <div class="product-card-image">
-                <img src="https://picsum.photos/270/230" alt="product">
+                <img src="https://picsum.photos/270/230" alt="Product Title">
             </div>
             <div class="product-card-content">
                 <div class="card-text">
