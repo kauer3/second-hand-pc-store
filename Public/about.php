@@ -15,7 +15,7 @@ include "Layout/header.php";
             </div>
             <div class="image-and-squares">
                 <div class="about-image square-image-container">
-                    <img src="https://picsum.photos/500/900" alt="About Us Image">
+                    <img src="https://picsum.photos/500/900" alt="LARK Computing">
                 </div>
             </div>
         </div>
