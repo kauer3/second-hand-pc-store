@@ -220,7 +220,7 @@ header {
 }
 
 .login-button:hover,
-.form-container > form > button:hover {
+.form-container > form > .form-submit-button:hover {
     color: var(--background);
     background-color: var(--primary);
 }
@@ -298,8 +298,11 @@ main.main-content:not(.unset-margin) {
 
 .form-container > form > button {
     width: 300px;
-    margin: 40px 0;
     align-self: center;
+}
+
+.form-container > form > .form-submit-button {
+    margin: 40px 0;
 }
 
 .form-container > .message > a {
