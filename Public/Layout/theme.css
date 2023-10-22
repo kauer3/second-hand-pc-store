@@ -7,6 +7,8 @@
     --tertiary: #d7e1e1;
     --quaternary: #d4d4ca;
     --accent: #12ccd9;
+
+    --shadow: #00000066;
 }
 
 @media (prefers-color-scheme: dark) {
