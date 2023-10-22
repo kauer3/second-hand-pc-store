@@ -1,15 +1,3 @@
-main.product-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    padding: 100px 10%;
-}
-
-.product-title {
-    font-size: 2rem;
-    margin-bottom: 40px;
-}
-
 .product-info {
     display: grid;
     grid-template-columns: 4fr 3fr;
@@ -32,17 +20,7 @@ main.product-main {
 .images-grid > .sub-images > .sub-image,
 .images-grid > .main-image {
     width: auto;
-}
-
-.images-grid > .sub-images > .sub-image > img,
-.images-grid > .main-image > img {
-    aspect-ratio: 1/1;
-}
-
-.images-grid > .sub-images > .sub-image > img, .images-grid > .main-image > img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
+    box-shadow: 0 0 10px #00000066;
 }
 
 .specs-and-buttons {
@@ -54,7 +32,7 @@ main.product-main {
         "button1 button2"
         "specs specs";
     ;
-    row-gap: 20px;
+    row-gap: 25px;
     column-gap: 8%;
     justify-items: stretch;
 }
@@ -124,6 +102,7 @@ main.product-main {
 .specs-and-buttons > button {
     border-radius: 5px;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .specs-and-buttons > .specs {
@@ -132,14 +111,10 @@ main.product-main {
 
 .description {
     margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
 
 .description-title {
     font-size: 1.5rem;
-    margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1500px) {
