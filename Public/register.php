@@ -22,7 +22,7 @@ include "Layout/header.php";
                 <input type="text" id="phone" name="phone">
             </div>
         </div>
-        <button type="submit">Register</button>
+        <button class="form-submit-button" type="submit">Register</button>
     </form>
     <span class="message">
         Already have an account? <a href="login.php">Log in here</a>.
