@@ -1,5 +1,6 @@
 <?php
-include "Layout/header.php";
+    include "Layout/header.php";
+    include "../Include/FilterProducts.php";
 ?>
 <div class="banner"></div>
 <div class="main-section">
