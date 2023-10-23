@@ -183,7 +183,7 @@ header {
 }
 
 .search-bar > .search-input,
-.form-container > form > .form-input-wrapper > .form-field > input {
+.form-container * .form-input-wrapper > .form-field > input {
     padding: 0 40px 0 15px;
     background-color: var(--tertiary);
     color: var(--text-opaque);
@@ -194,7 +194,7 @@ header {
 }
 
 .search-input:focus ,
-.form-container > form > .form-input-wrapper > .form-field > input:focus {
+.form-container * .form-input-wrapper > .form-field > input:focus {
     box-shadow: 0 0 5px #000000a0;
     background-color: var(--background);
 }
@@ -204,6 +204,7 @@ header {
 }
 
 .login-button,
+.cart-checkout-button,
 .form-container > form > button {
     font-weight: 500;
     color: var(--primary);
@@ -220,6 +221,7 @@ header {
 }
 
 .login-button:hover,
+.cart-checkout-button:hover,
 .form-container > form > .form-submit-button:hover {
     color: var(--background);
     background-color: var(--primary);
@@ -271,38 +273,41 @@ main.main-content:not(.unset-margin) {
     box-shadow: 0 0 10px var(--shadow);
 }
 
-.form-container > form > .form-input-wrapper {
-    gap: 15px;
+.form-container * .form-input-wrapper {
+    gap: 20px;
 }
 
 .form-container,
 .form-container > form,
-.form-container > form > .form-input-wrapper,
-.form-container > form > .form-input-wrapper > .form-field {
+.form-container * .form-input-wrapper,
+.form-container * .form-input-wrapper > .form-field {
     display: flex;
     flex-direction: column;
 }
 
-.form-container > form > .form-input-wrapper,
-.form-container > form > .form-input-wrapper > .form-field {
+.form-container * .form-input-wrapper,
+.form-container * .form-input-wrapper > .form-field {
     align-items: stretch;
 }
 
-.form-container > form > .form-input-wrapper > .form-field {
+.form-container * .form-input-wrapper > .form-field {
     gap: 5px;
 }
 
-.form-container > form > .form-input-wrapper > .form-field > input {
+.form-container * .form-input-wrapper > .form-field > input {
     height: 30px;
 }
 
+.cart-checkout-button,
 .form-container > form > button {
     width: 300px;
     align-self: center;
 }
 
+.cart-checkout-button,
 .form-container > form > .form-submit-button {
     margin: 40px 0;
+    height: 40px;
 }
 
 .form-container > .message > a {
@@ -394,6 +399,7 @@ footer > .footer-container > .contacts {
 
 @media (prefers-color-scheme: dark) {
     .login-button:hover,
+    .cart-checkout-button:hover,
     .form-container > form > button:hover {
         box-shadow: 0 0 10px var(--primary);
     }
@@ -403,7 +409,7 @@ footer > .footer-container > .contacts {
     }
 
     .search-input:focus,
-    .form-container > form > .form-input-wrapper > .form-field > input:focus {
+    .form-container * .form-input-wrapper > .form-field > input:focus {
         box-shadow: 0 0 10px var(--quaternary);
         border-color: var(--quaternary);
         background-color: var(--background);
