@@ -81,6 +81,20 @@
         </form>
     </div>
     <main class="products-grid">
+        <?php
+            function product_div($listProd) {
+                foreach($listProd as $item) {
+                    echo "<div class=\"product-card\" onclick=\"document.location.href='product.php?product=" . $item->prodID . "'\">";
+                    echo "<div class=\"product-card-image\"><img src=\"./Assets/Img/" . $item->prodID . ".jpeg\" alt=\"" . $item->name . "\"></div>";
+                    echo "<div class=\"product-card-content\">";
+                    echo "<div class=\"card-text\">";
+                    echo "<div class=\"product-card-title\">" . $item->name . "</div>";
+                    echo "<div class=\"product-card-price text\">$" . $item->price . "</div>";
+                    echo "</div><button class=\"product-card-button text\">Add to Cart</button></div></div>";
+                }
+            }
+            product_div($productList);
+        ?>
         <div class="product-card" onclick="document.location.href='product.php'">
             <div class="product-card-image">
                 <img src="https://picsum.photos/270/230" alt="Product Title">
