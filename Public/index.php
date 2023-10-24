@@ -1,27 +1,6 @@
 <?php
     include "Layout/header.php";
     include "../Include/FilterProducts.php";
-
-    // $url = $_SERVER['REQUEST_URI'];
-    // $url_components = parse_url($url);
-    // parse_str($url_components['query'], $params);
-    // $GPU = $params['GPU'];
-    // $CPU = $params['CPU'];
-    // $Motherboard = $params['Motherboard'];
-    // $RAM = $params['RAM'];
-    // $Dell = $params['Dell'];
-    // $Acer = $params['Acer'];
-    // $Intel = $params['Intel'];
-    // $AMD = $params['AMD'];
-    // $Nvidia = $params['Nvidia'];
-    // $MinPrice = $params['MinPrice'];
-    // $MaxPrice = $params['MaxPrice'];
-
-    // //if $GPU is on, get reference for corresponding input checkbox and mark it as checked
-    // if ($GPU == "on") {
-    //     $GPU = "checked";
-    // }
-
 ?>
 <div class="banner"></div>
 <div class="main-section">
