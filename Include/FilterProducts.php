@@ -4,40 +4,42 @@
     
     $sql = [];
     $parameteres = [];
+    $query = "SELECT * FROM products";
+
     if(isset($_GET["search"])){
-        $sql[] = " name LIKE ?";
+        $queryConstruct = " WHERE name LIKE ?";
         $parameteres[] = "%" . $_GET["search"] . "%";
     }
 
     //Filters by type
-    if(isset($_GET["CPU"])){
-        $sql[] = " type = CPU";
+    if(isset($_GET["CPU"]) && $_GET["CPU"]){
+        $sql[] = " category = 'CPU'";
     }
-    if(isset($_GET["GPU"])){
-        $sql[] = " type = GPU";
+    if(isset($_GET["GPU"]) && $_GET["GPU"]){
+        $sql[] = " category = 'GPU'";
     }
-    if(isset($_GET["Motherboard"])){
-        $sql[] = " type = Motherboard";
+    if(isset($_GET["Motherboard"]) && $_GET["Motherboard"]){
+        $sql[] = " category = 'Motherboard'";
     }
-    if(isset($_GET["RAM"])){
-        $sql[] = " type = RAM";
+    if(isset($_GET["RAM"]) && $_GET["RAM"]){
+        $sql[] = " category = 'RAM'";
     }
 
     //Filters by manufacture
-    if(isset($_GET["Dell"])){
-        $sql[] = " manufacture = Dell";
+    if(isset($_GET["Dell"]) && $_GET["Dell"]){
+        $sql[] = " manufacture = 'Dell'";
     }
-    if(isset($_GET["Acer"])){
-        $sql[] = " manufacture = Acer";
+    if(isset($_GET["Acer"]) && $_GET["Acer"]){
+        $sql[] = " manufacture = 'Acer'";
     }
-    if(isset($_GET["Intel"])){
-        $sql[] = " manufacture = Intel";
+    if(isset($_GET["Intel"]) && $_GET["Intel"]){
+        $sql[] = " manufacture = 'Intel'";
     }
-    if(isset($_GET["AMD"])){
-        $sql[] = " manufacture = AMD";
+    if(isset($_GET["AMD"]) && $_GET["AMD"]){
+        $sql[] = " manufacture = 'AMD'";
     }
-    if(isset($_GET["Nvidia"])){
-        $sql[] = " manufacture = Nvidia";
+    if(isset($_GET["Nvidia"]) && $_GET["Nvidia"]){
+        $sql[] = " manufacture = 'Nvidia'";
     }
     
     //Minprice and Maxprice check
@@ -48,7 +50,7 @@
         $maxPrice = floatval($_GET["MaxPrice"]);
     }
     if(isset($minPrice) && isset($maxPrice) && $minPrice < $maxPrice){
-        $sql[] = " price BETWEEN " . $minPrice . " AND " . $maxPrice;
+        $sql[] = " price BETWEEN " . $minPrice - 0.01 . " AND " . $maxPrice + 0.01;
     }
     elseif(isset($minPrice)){
         $sql[] = " price > $minPrice";
@@ -57,12 +59,20 @@
         $sql[] = " price < $maxPrice";
     }
     //
-    
-    //Construct SQL Query
-    $query = "SELECT * FROM products";
+
     if($sql) {
-        $query .= ' WHERE ' . implode(' AND ', $sql);
+        if(isset($queryConstruct)){
+            $queryConstruct .= " AND (" . implode(' OR ', $sql) . ")";
+        }
+        else{
+            $queryConstruct = " WHERE " . implode(' OR ', $sql);
+        }
+        
     }
+    if(isset($queryConstruct)){
+        $query .= $queryConstruct;
+    }
+    echo $query;
     //Prepare Statements
     $stmt = $connection->prepare($query);
     if($parameteres){
