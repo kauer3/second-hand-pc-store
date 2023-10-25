@@ -50,13 +50,13 @@
         $maxPrice = floatval($_GET["MaxPrice"]);
     }
     if(isset($minPrice) && isset($maxPrice) && $minPrice < $maxPrice){
-        $sql[] = " price BETWEEN " . $minPrice - 0.01 . " AND " . $maxPrice + 0.01;
+        $sqlPrice = " AND price BETWEEN " . $minPrice - 0.01 . " AND " . $maxPrice + 0.01;
     }
     elseif(isset($minPrice)){
-        $sql[] = " price > $minPrice";
+        $sqlPrice = " AND price > $minPrice";
     }
     elseif(isset($maxPrice)){
-        $sql[] = " price < $maxPrice";
+        $sqlPrice = " AND price < $maxPrice";
     }
     //
 
@@ -72,7 +72,9 @@
     if(isset($queryConstruct)){
         $query .= $queryConstruct;
     }
-    echo $query;
+    if(isset($sqlPrice)){
+        $query .= $sqlPrice;
+    }
     //Prepare Statements
     $stmt = $connection->prepare($query);
     if($parameteres){
