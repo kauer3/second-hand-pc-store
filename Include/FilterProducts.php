@@ -27,39 +27,23 @@
 
     //Filters by manufacture
     if(isset($_GET["Dell"]) && $_GET["Dell"]){
-        $sql[] = " manufacture = 'Dell'";
+        $sql2[] = " manufacture = 'Dell'";
     }
     if(isset($_GET["Acer"]) && $_GET["Acer"]){
-        $sql[] = " manufacture = 'Acer'";
+        $sql2[] = " manufacture = 'Acer'";
     }
     if(isset($_GET["Intel"]) && $_GET["Intel"]){
-        $sql[] = " manufacture = 'Intel'";
+        $sql2[] = " manufacture = 'Intel'";
     }
     if(isset($_GET["AMD"]) && $_GET["AMD"]){
-        $sql[] = " manufacture = 'AMD'";
+        $sql2[] = " manufacture = 'AMD'";
     }
     if(isset($_GET["Nvidia"]) && $_GET["Nvidia"]){
-        $sql[] = " manufacture = 'Nvidia'";
-    }
-    
-    //Minprice and Maxprice check
-    if(isset($_GET["MinPrice"])){
-        $minPrice = floatval($_GET["MinPrice"]);
-    }
-    if(isset($_GET["MaxPrice"])){
-        $maxPrice = floatval($_GET["MaxPrice"]);
-    }
-    if(isset($minPrice) && isset($maxPrice) && $minPrice < $maxPrice){
-        $sqlPrice = " AND price BETWEEN " . $minPrice - 0.01 . " AND " . $maxPrice + 0.01;
-    }
-    elseif(isset($minPrice)){
-        $sqlPrice = " AND price > $minPrice";
-    }
-    elseif(isset($maxPrice)){
-        $sqlPrice = " AND price < $maxPrice";
+        $sql2[] = " manufacture = 'Nvidia'";
     }
     //
-
+    
+    //
     if($sql) {
         if(isset($queryConstruct)){
             $queryConstruct .= " AND (" . implode(' OR ', $sql) . ")";
@@ -69,6 +53,44 @@
         }
         
     }
+    if($sql2) {
+        if(isset($queryConstruct)){
+            $queryConstruct .= " AND (" . implode(' OR ', $sql2) . ")";
+        }
+        else{
+            $queryConstruct = " WHERE " . implode(' OR ', $sql2);
+        }
+        
+    }
+    //Minprice and Maxprice check
+    if(isset($_GET["MinPrice"])){
+        $minPrice = floatval($_GET["MinPrice"]);
+    }
+    if(isset($_GET["MaxPrice"])){
+        $maxPrice = floatval($_GET["MaxPrice"]);
+    }
+    if(isset($queryConstruct)){
+        if(isset($minPrice) && isset($maxPrice) && $minPrice < $maxPrice){
+            $sqlPrice = " AND price BETWEEN " . $minPrice - 0.01 . " AND " . $maxPrice + 0.01;
+        }
+        elseif(isset($minPrice)){
+            $sqlPrice = " AND price > $minPrice";
+        }
+        elseif(isset($maxPrice)){
+            $sqlPrice = " AND price < $maxPrice";
+        }
+    }
+    elseif(isset($minPrice) && isset($maxPrice) && $minPrice < $maxPrice){
+        $sqlPrice = " WHERE price BETWEEN " . $minPrice - 0.01 . " AND " . $maxPrice + 0.01;
+    }
+    elseif(isset($minPrice)){
+        $sqlPrice = " WHERE price > $minPrice";
+    }
+    elseif(isset($maxPrice)){
+        $sqlPrice = " WHERE price < $maxPrice";
+    }
+    //
+
     if(isset($queryConstruct)){
         $query .= $queryConstruct;
     }
@@ -80,7 +102,7 @@
     if($parameteres){
         $stmt->bind_param(str_repeat('s', count($parameteres)), ...$parameteres);
     }
-
+    
     $stmt->execute();
     $result = $stmt->get_result();
     
