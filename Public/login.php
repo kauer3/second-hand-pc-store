@@ -8,7 +8,7 @@
             <div class="form-input-wrapper">
                 <div class="form-field">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" <?php if(isset($_SESSION["login_error"]))
+                    <input required type="email" id="email" name="email" <?php if(isset($_SESSION["login_error"]))
                     {
                         echo "value=\"" . $_SESSION["email"] . "\"";
                         unset($_SESSION["login_error"]);
@@ -18,7 +18,7 @@
                 </div>
                 <div class="form-field">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password">
+                    <input required type="password" id="password" name="password">
                 </div>
             </div>
             <button class="form-submit-button" type="submit">Login</button>

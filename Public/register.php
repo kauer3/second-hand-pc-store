@@ -8,13 +8,13 @@ include "Layout/header.php";
             <div class="form-input-wrapper">
                 <div class="form-field">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" <?php if(isset($_SESSION["password_missmatch"])){
+                    <input required type="email" id="email" name="email" <?php if(isset($_SESSION["password_missmatch"])){
                         echo "value=\"" . $_SESSION["email"] . "\"";}
                     ?> required>
                 </div>
                 <div class="form-field">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" <?php if(isset($_SESSION["password_missmatch"])){
+                    <input required type="password" id="password" name="password" <?php if(isset($_SESSION["password_missmatch"])){
                         echo"value=\"" . $_SESSION["password"] . "\"";
                         unset($_SESSION["password_missmatch"]);
                         unset($_SESSION["email"]);
@@ -24,11 +24,11 @@ include "Layout/header.php";
                 </div>
                 <div class="form-field">
                     <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required>
+                    <input required type="password" id="confirm-password" name="confirm-password" required>
                 </div>
                 <div class="form-field">
                     <label for="phone">Phone</label>
-                    <input type="text" id="phone" name="phone" required>
+                    <input required type="text" id="phone" name="phone" required>
                 </div>
             </div>
             <button class="form-submit-button" type="submit">Register</button>
