@@ -3,6 +3,7 @@
     include "../Include/Product.php";
     
     $sql = [];
+    $sql2 = [];
     $parameteres = [];
     $query = "SELECT * FROM products";
 
