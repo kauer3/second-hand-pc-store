@@ -240,12 +240,21 @@ header {
     rotate: -10deg;
 }
 
+.center-content {
+    display: flex;
+    place-content: center;
+}
+
 main.main-content {
     display: flex;
     flex-direction: column;
     justify-content: start;
     padding: 100px 10%;
     max-width: 1800px;
+}
+
+main.main-content.unset-margin {
+    flex: 1;
 }
 
 main.main-content:not(.unset-margin) {
