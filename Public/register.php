@@ -40,19 +40,19 @@ include "Layout/header.php";
                 </div>
                 <div class="form-field">
                     <label for="address">Address</label>
-                    <input required type="address" id="address" name="address">
+                    <input type="address" id="address" name="address">
                 </div>
                 <div class="form-field">
                     <label for="city">City</label>
-                    <input required type="text" id="city" name="city">
+                    <input type="text" id="city" name="city">
                 </div>
                 <div class="form-field">
                     <label for="zip">Zip Code</label>
-                    <input required type="text" id="zip" name="zip">
+                    <input type="text" id="zip" name="zip">
                 </div>
                 <div class="form-field">
                     <label for="country">Country</label>
-                    <input required type="text" id="country" name="country">
+                    <input type="text" id="country" name="country">
                 </div>
                 <div class="form-field">
                     <label for="phone">Phone</label>
