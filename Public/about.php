@@ -7,9 +7,6 @@ include "Layout/header.php";
         <div class="about-content-container">
             <div class="about-text paragraphs">
                 <p class="text">
-                    I’m Lark Larkenson the founder of Lark Technologies.
-                </p>
-                <p class="text">
                     Lark Technologies was established in 2021 due to losing my job as a hardware engineer at BrightSpark due to covid and the lack of people selling prebuilt pcs in my area of Stewart Island / Rakiura.
                 </p>
                 <p class="text">
@@ -18,7 +15,7 @@ include "Layout/header.php";
             </div>
             <div class="image-and-squares">
                 <div class="about-image square-image-container">
-                    <img src="/Public/Images/about.jpg" alt="LARK Computing">
+                    <img src="../Public/Images/about.jpg" alt="LARK Computing">
                 </div>
             </div>
         </div>
@@ -29,7 +26,7 @@ include "Layout/header.php";
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     </span>
     <div class="author-image square-image-container">
-        <img src="/Public/Images/logo.jpg" alt="LARK">
+        <img src="../Public/Images/logo.jpg" alt="LARK">
     </div>
     <span class="author-name">John Smith, CTO at LARK Computing</span>
 </div>
