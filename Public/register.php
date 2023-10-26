@@ -8,13 +8,13 @@ include "Layout/header.php";
             <div class="form-input-wrapper register-form-grid">
                 <div class="form-field">
                     <label for="email">Email</label>
-                    <input required type="email" id="email" name="email" <?php if(isset($_SESSION["password_missmatch"])){
+                    <input type="email" id="email" name="email" <?php if(isset($_SESSION["password_missmatch"])){
                         echo "value=\"" . $_SESSION["email"] . "\"";}
                     ?> required>
                 </div>
                 <div class="form-field">
                     <label for="password">Password</label>
-                    <input required type="password" id="password" name="password" <?php if(isset($_SESSION["password_missmatch"])){
+                    <input type="password" id="password" name="password" <?php if(isset($_SESSION["password_missmatch"])){
                         echo"value=\"" . $_SESSION["password"] . "\"";
                         unset($_SESSION["password_missmatch"]);
                         unset($_SESSION["email"]);
@@ -24,19 +24,19 @@ include "Layout/header.php";
                 </div>
                 <div class="form-field">
                     <label for="confirm-password">Confirm Password</label>
-                    <input required type="password" id="confirm-password" name="confirm-password" required>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
                 </div>
                 <div class="form-field">
                     <label for="phone">Phone</label>
-                    <input required type="text" id="phone" name="phone" required>
+                    <input type="text" id="phone" name="phone" required>
                 </div>
                 <div class="form-field">
                     <label for="first-name">First Name</label>
-                    <input required type="text" id="first-name" name="first-name">
+                    <input type="text" id="first-name" name="first-name" required>
                 </div>
                 <div class="form-field">
                     <label for="last-name">Last Name</label>
-                    <input required type="text" id="last-name" name="last-name">
+                    <input type="text" id="last-name" name="last-name" required>
                 </div>
                 <div class="form-field">
                     <label for="address">Address</label>
@@ -56,7 +56,7 @@ include "Layout/header.php";
                 </div>
                 <div class="form-field">
                     <label for="phone">Phone</label>
-                    <input required type="text" id="phone" name="phone">
+                    <input type="text" id="phone" name="phone" required>
                 </div>
             </div>
             <button class="form-submit-button" type="submit">Register</button>
