@@ -1,0 +1,128 @@
+main.form-container * .register-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "email email"
+    "password password"
+    "confirm-password confirm-password"
+    "first-name last-name"
+    "address address"
+    "city city"
+    "zip-code country"
+    "phone phone"
+    "checkbox checkbox"
+    ;
+    column-gap: 3%;
+    margin-bottom: 30px;
+}
+
+main.form-container * .register-form-grid > .form-field:nth-child(1) {
+    grid-area: email;
+}
+
+main.form-container * .register-form-grid > .form-field:nth-child(2) {
+    grid-area: password;
+}
+
+main.form-container * .register-form-grid > .form-field:nth-child(3) {
+    grid-area: confirm-password;
+}
+
+main.form-container * .register-form-grid > .form-field:nth-child(4) {
+    grid-area: phone;
+}
+
+main.form-container * .register-form-grid > .form-field:nth-child(5) {
+    grid-area: first-name;
+}
+
+main.form-container * .register-form-grid > .form-field:nth-child(6) {
+    grid-area: last-name;
+}
+
+main.form-container * .register-form-grid > .form-field:nth-child(7) {
+    grid-area: address;
+}
+
+main.form-container * .register-form-grid > .form-field:nth-child(8) {
+    grid-area: city;
+}
+
+main.form-container * .register-form-grid > .form-field:nth-child(9) {
+    grid-area: zip-code;
+}
+
+main.form-container * .register-form-grid > .form-field:nth-child(10) {
+    grid-area: country;
+}
+
+main.form-container * .register-form-grid > .form-field:nth-child(11) {
+    grid-area: phone;
+}
+
+main.form-container > form > .subtitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* main.form-container > form > .checkout-submit-button {
+    height: 65px;
+    position: relative;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 19px;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+    z-index: 1;
+} */
+
+/* main.form-container > form > .checkout-submit-button::before,
+main.form-container > form > .checkout-submit-button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 60px solid var(--quaternary);
+    translate: -50% -50%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+} */
+
+/* main.form-container > form > .checkout-submit-button::before {
+    background-color: var(--primary);
+    scale: 0;
+    transition-delay: .5s;
+    z-index: -2;
+} */
+
+/* main.form-container > form > .checkout-submit-button::after {
+    background-color: var(--background);
+    scale: 1.73;
+    z-index: -1;
+    transition: all .8s ease-out;
+} */
+
+/* main.form-container > form > .checkout-submit-button:hover {
+    color: var(--background);
+    transition: all .5s ease-in-out, box-shadow .8s ease-out;
+} */
+
+/* main.form-container > form > .checkout-submit-button:hover::before {
+    scale: 1.73;
+    transition: all .8s ease-out;
+} */
+
+/* main.form-container > form > .checkout-submit-button:hover::after {
+    scale: 0;
+    transition: none;
+    transition-delay: .5s;
+} */
+
+@media screen and (max-width: 1000px) {
+    main.form-container * .register-form-grid {
+        display: flex;
+        flex-direction: column;
+    }
+}

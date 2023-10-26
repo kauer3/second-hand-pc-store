@@ -13,6 +13,9 @@
     }
 
     //Filters by type
+    if(isset($_GET["Prebuilt"]) && $_GET["Prebuilt"]){
+        $sql[] = " category = 'Prebuilt'";
+    }
     if(isset($_GET["CPU"]) && $_GET["CPU"]){
         $sql[] = " category = 'CPU'";
     }
