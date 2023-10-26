@@ -30,14 +30,16 @@
                 <i class="menu-icon fa fa-bars"></i>
             </div>
             <div class="menu">
-                <div class="menu-item text">Pre-built PCs</div>
-                <div class="menu-item text">PC Parts</div>
-                <div class="menu-item text">On Sale</div>
-                <div class="menu-item text">Dell</div>
-                <div class="menu-item text">Acer</div>
-                <div class="menu-item text">Intel</div>
-                <div class="menu-item text">AMD</div>
-                <div class="menu-item text">Nvidia</div>
+                <a class="menu-item text" href="index.php?Prebuilt=true">Prebuilt PCs</a>
+                <a class="menu-item text" href="index.php?CPU=true">CPU</a>
+                <a class="menu-item text" href="index.php?GPU=true">GPU</a>
+                <a class="menu-item text" href="index.php?Motherboard=true">Motherboard</a>
+                <a class="menu-item text" href="index.php?RAM=true">RAM</a>
+                <a class="menu-item text" href="index.php?Dell=true">Dell</a>
+                <a class="menu-item text" href="index.php?Acer=true">Acer</a>
+                <a class="menu-item text" href="index.php?Intel=true">Intel</a>
+                <a class="menu-item text" href="index.php?AMD=true">AMD</a>
+                <a class="menu-item text"href="index.php?Nvidia=true">Nvidia</a>
                 <a class="menu-item text" href="about.php">About Us</a>
             </div>
         </div>
@@ -45,7 +47,7 @@
             <span class="logo" onclick="document.location.href='index.php'">LARK</span>
         </div>
         <form class="search-bar">
-            <input type="text" class="search-input" placeholder="Search..." name="search">
+            <input type="text" class="search-input" placeholder="Search..." name="search" <?php if(isset($_GET["search"])){echo "value=\"" . $_GET["search"] . "\"";}?>>
             <button type="submit">
                 <i class="search-icon fa fa-search"></i>
             </button>

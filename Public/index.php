@@ -9,6 +9,10 @@
             <h3 class="filter-title text">Filter by:</h3>
             <div class="filter-item">
                 <div class="filter-item-content-item">
+                    <label class="text" for="Prebuilt">Pre-built</label>
+                    <input class="filter-checkbox" type="checkbox" name="Prebuilt" id="Prebuilt" onchange="updateURL(this)" <?php if(isset($_GET["Prebuilt"])){echo "checked";}?>>
+                </div>
+                <div class="filter-item-content-item">
                     <label class="text" for="CPU">CPU</label>
                     <input class="filter-checkbox" type="checkbox" name="CPU" id="CPU" onchange="updateURL(this)" <?php if(isset($_GET["CPU"])){echo "checked";}?>>
                 </div>
