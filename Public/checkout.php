@@ -9,31 +9,31 @@ include "Layout/header.php";
             <div class="form-input-wrapper form-grid">
                 <div class="form-field">
                     <label for="first-name">First Name</label>
-                    <input required type="text" id="first-name" name="first-name">
+                    <input type="text" id="first-name" name="first-name" required>
                 </div>
                 <div class="form-field">
                     <label for="last-name">Last Name</label>
-                    <input required type="text" id="last-name" name="last-name">
+                    <input type="text" id="last-name" name="last-name" required>
                 </div>
                 <div class="form-field">
                     <label for="address">Address</label>
-                    <input required type="address" id="address" name="address">
+                    <input type="address" id="address" name="address" required>
                 </div>
                 <div class="form-field">
                     <label for="city">City</label>
-                    <input required type="text" id="city" name="city">
+                    <input type="text" id="city" name="city" required>
                 </div>
                 <div class="form-field">
                     <label for="zip">Zip Code</label>
-                    <input required type="text" id="zip" name="zip">
+                    <input type="text" id="zip" name="zip" required>
                 </div>
                 <div class="form-field">
                     <label for="country">Country</label>
-                    <input required type="text" id="country" name="country">
+                    <input type="text" id="country" name="country" required>
                 </div>
                 <div class="form-field">
                     <label for="phone">Phone</label>
-                    <input required type="text" id="phone" name="phone">
+                    <input type="text" id="phone" name="phone" required>
                 </div>
             </div>
             <div class="checkbox-and-form-wrapper">
@@ -43,31 +43,31 @@ include "Layout/header.php";
                 <div class="form-input-wrapper form-grid expandable">
                     <div class="form-field">
                         <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" name="first-name">
+                        <input type="text" id="first-name" name="first-name" required>
                     </div>
                     <div class="form-field">
                         <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" name="last-name">
+                        <input type="text" id="last-name" name="last-name" required>
                     </div>
                     <div class="form-field">
                         <label for="address">Address</label>
-                        <input type="address" id="address" name="address">
+                        <input type="address" id="address" name="address" required>
                     </div>
                     <div class="form-field">
                         <label for="city">City</label>
-                        <input type="text" id="city" name="city">
+                        <input type="text" id="city" name="city" required>
                     </div>
                     <div class="form-field">
                         <label for="zip">Zip Code</label>
-                        <input type="text" id="zip" name="zip">
+                        <input type="text" id="zip" name="zip" required>
                     </div>
                     <div class="form-field">
                         <label for="country">Country</label>
-                        <input type="text" id="country" name="country">
+                        <input type="text" id="country" name="country" required>
                     </div>
                     <div class="form-field">
                         <label for="phone">Phone</label>
-                        <input type="text" id="phone" name="phone">
+                        <input type="text" id="phone" name="phone" required>
                     </div>
                 </div>
             </div>
