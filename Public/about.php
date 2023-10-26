@@ -7,15 +7,15 @@ include "Layout/header.php";
         <div class="about-content-container">
             <div class="about-text paragraphs">
                 <p class="text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non diam phasellus vestibulum lorem sed. Arcu vitae elementum curabitur vitae nunc. Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Nisl vel pretium lectus quam id leo in. Sed viverra tellus in hac habitasse. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam. Egestas integer eget aliquet nibh praesent.
+                    Lark Technologies was established in 2021 due to losing my job as a hardware engineer at BrightSpark due to covid and the lack of people selling prebuilt pcs in my area of Stewart Island / Rakiura.
                 </p>
                 <p class="text">
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique. Vitae congue mauris rhoncus aenean vel elit scelerisque. Auctor augue mauris augue neque gravida in. Magna eget est lorem ipsum dolor sit amet consectetur. Tincidunt arcu non sodales neque. Venenatis urna cursus eget nunc scelerisque viverra mauris.
+                    Very quickly Lark Technologies 's turnover surpassed the GST threshold limits and the business was subsequently registered as a company in 2022. I have managed Lark Technologies 's significant growth for these past few years. whilst always maintaining the highest levels of customer satisfaction and unique hardware equipment.
                 </p>
             </div>
             <div class="image-and-squares">
                 <div class="about-image square-image-container">
-                    <img src="https://picsum.photos/500/900" alt="LARK Computing">
+                    <img src="../Public/Images/about.jpg" alt="LARK Computing">
                 </div>
             </div>
         </div>
@@ -26,7 +26,7 @@ include "Layout/header.php";
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     </span>
     <div class="author-image square-image-container">
-        <img src="https://picsum.photos/50" alt="Author">
+        <img src="../Public/Images/logo.jpg" alt="LARK">
     </div>
     <span class="author-name">John Smith, CTO at LARK Computing</span>
 </div>
