@@ -1,5 +1,6 @@
 <?php
     include "Layout/header.php";
+    if(isset($_SESSION["user"])){header('Location: ./index.php');}
 ?>
 <div class="center-content">
     <main class="main-content unset-margin form-container">

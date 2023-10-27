@@ -11,6 +11,12 @@
 
     $email = $_POST["email"];
     $password = $_POST["password"];
+    $firstname = $_POST["first-name"];
+    $lastname = $_POST["last-name"];
+    $address = $_POST["address"];
+    $city = $_POST["city"];
+    $zipcode = $_POST["zip"];
+    $country = $_POST["country"];
     $confirm_password = $_POST["confirm-password"];
     $phone = $_POST["phone"];
 
@@ -30,17 +36,24 @@
         if($password != $confirm_password){
             $_SESSION["email"] = $email;
             $_SESSION["password"] = $password;
-            $_SESSION["password_missmatch"] = true;
+            $_SESSION["firstname"] = $firstname;
+            $_SESSION["lastname"] = $lastname;
+            $_SESSION["address"] = $address;
+            $_SESSION["city"] = $city;
+            $_SESSION["zip"] = $zipcode;
+            $_SESSION["country"] = $country;
+            $_SESSION["phone"] = $phone;
+            $_SESSION["error"] = true;
             header('Location: ../register.php');
             die;
         }
 
-        $sql = "INSERT INTO users (email, password, phone) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO users (email, password, firstname, lastname, address, city, zipcode, country, phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $connection->prepare($sql);
         if(!$stmt) {
             die("Failed preparing SQL statment: " . $connection->error);
         }
-        $stmt->bind_param('sss', $email, $password_hash, $phone);
+        $stmt->bind_param('ssssssiss', $email, $password_hash, $firstname, $lastname, $address, $city, $zipcode, $country, $phone);
         $stmt->execute();
         header('Location: ../login.php');
     }

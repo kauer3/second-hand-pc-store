@@ -9,31 +9,31 @@ include "Layout/header.php";
             <div class="form-input-wrapper form-grid">
                 <div class="form-field">
                     <label for="first-name">First Name</label>
-                    <input type="text" id="first-name" name="first-name" required>
+                    <input type="text" id="first-name" name="first-name" <?php if(isset($user)){echo "value=\"" . $user->firstname . "\"";}?> required>
                 </div>
                 <div class="form-field">
                     <label for="last-name">Last Name</label>
-                    <input type="text" id="last-name" name="last-name" required>
+                    <input type="text" id="last-name" name="last-name" <?php if(isset($user)){echo "value=\"" . $user->lastname . "\"";}?> required>
                 </div>
                 <div class="form-field">
                     <label for="address">Address</label>
-                    <input type="address" id="address" name="address" required>
+                    <input type="address" id="address" name="address" <?php if(isset($user)){echo "value=\"" . $user->address . "\"";}?> required>
                 </div>
                 <div class="form-field">
                     <label for="city">City</label>
-                    <input type="text" id="city" name="city" required>
+                    <input type="text" id="city" name="city" <?php if(isset($user)){echo "value=\"" . $user->city . "\"";}?> required>
                 </div>
                 <div class="form-field">
                     <label for="zip">Zip Code</label>
-                    <input type="text" id="zip" name="zip" required>
+                    <input type="text" id="zip" name="zip"<?php if(isset($user)){echo "value=\"" . $user->zipcode . "\"";}?> required>
                 </div>
                 <div class="form-field">
                     <label for="country">Country</label>
-                    <input type="text" id="country" name="country" required>
+                    <input type="text" id="country" name="country" <?php if(isset($user)){echo "value=\"" . $user->country . "\"";}?> required>
                 </div>
                 <div class="form-field">
                     <label for="phone">Phone</label>
-                    <input type="text" id="phone" name="phone" required>
+                    <input type="text" id="phone" name="phone" <?php if(isset($user)){echo "value=\"" . $user->phone . "\"";}?> required>
                 </div>
             </div>
             <div class="checkbox-and-form-wrapper">

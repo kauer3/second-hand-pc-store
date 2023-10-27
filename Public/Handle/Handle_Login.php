@@ -23,7 +23,8 @@
     if($row = $result->fetch_assoc()){
         $password_hash = $row["password"];
         if(password_verify($password, $password_hash)){
-            $_SESSION["user"] = new User($row["userID"], $row["email"], $row["phone"]);
+            $user = new User($row["userID"], $row["email"], $row["firstname"], $row["lastname"], $row["address"], $row["city"], $row["zipcode"], $row["country"], $row["phone"]);
+            $_SESSION["user"] = serialize($user);
             header('Location: ../index.php');
         }
         else {

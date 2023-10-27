@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include "../Include/User.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +53,16 @@
                 <i class="search-icon fa fa-search"></i>
             </button>
         </form>
-        <button class="login-button" onclick="document.location.href='login.php'">Login</button>
+        <?php
+            if(isset($_SESSION["user"])){
+                $user = unserialize($_SESSION["user"]);
+                echo "<button class=\"login-button\" onclick=\"document.location.href='./Handle/Handle_Logoff.php'\">Logoff</button>";
+            }
+            else{
+                echo "<button class=\"login-button\" onclick=\"document.location.href='login.php'\">Login</button>";
+            }
+        ?>
+        
         <a href="cart.php">
             <i class="cart-icon fa fa-cart-shopping"></i>
         </a>
