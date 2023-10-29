@@ -1,6 +1,7 @@
 <?php
 include "Layout/header.php";
 include "../Include/GenProductPage.php";
+include "../Include/Cart.php";
 ?>
 <main class="main-content">
     <h1 class="main-title"><?php echo $product->name;?></h1>
@@ -26,7 +27,22 @@ include "../Include/GenProductPage.php";
         </div>
         <div class="specs-and-buttons">
             <h3 class="price"><?php echo "$" . $product->price;?></h3>
-            <button class="cart-button">Add To Cart</button>
+            <?php
+                $itemInCart = false; 
+                if(isset($_SESSION["cart"])) {
+                    $cartList = unserialize($_SESSION["cart"]);
+                    foreach($cartList as $item){
+                        if($item->prodID == $product->prodID){
+                            echo "<button class=\"cart-button\" onclick=\"document.location.href='./Handle/Handle_Remove_Cart.php?prodID=$product->prodID'\">Remove From Cart</button>";
+                            $itemInCart = true;
+                            break;
+                        }
+                    }
+                }
+                elseif(!$itemInCart) {
+                    echo "<button class=\"cart-button\" onclick=\"document.location.href='./Handle/Handle_Add_Cart.php?prodID=$product->prodID&name=$product->name&specs=$product->specs&price=$product->price'\">Add To Cart</button>";
+                }
+                ?>
             <button class="wishlist-button">Add To Wishlist</button>
             <span class="specs">
                 <?php echo $product->specs;?>
