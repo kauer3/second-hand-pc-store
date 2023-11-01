@@ -1,9 +1,12 @@
 .banner {
-    height: 580px;
     width: 100%;
-    background-color: var(--primary);
-    opacity: 1;
-    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, var(--primary) 18px), repeating-linear-gradient(#12ccd955, #12ccd9);
+}
+
+.banner > img {
+    object-fit: contain;
+    max-height: 580px;
+    width: 100%;
+    background-color: #fff;
 }
 
 .main-section {
@@ -73,30 +76,8 @@
 
 .filter-item-content-item-grid>input[type="range"] {
     max-width: 70px;
-    /* -webkit-appearance: none;
-    appearance: none;
-    background: transparent;
-    outline: none;
-    cursor: pointer;*/
+    cursor: pointer;
 }
-
-/*
-.filter-item-content-item-grid>input[type="range"]::-webkit-slider-runnable-track,
-.filter-item-content-item-grid>input[type="range"]::-ms-track,
-.filter-item-content-item-grid>input[type="range"]::-moz-range-track {
-    background: var(--quaternary);
-    height: 15px;
-    border-radius: 15px;
-}
-
-.filter-item-content-item-grid>input[type="range"]::-webkit-slider-thumb,
-.filter-item-content-item-grid>input[type="range"]::-ms-thumb,
-.filter-item-content-item-grid>input[type="range"]::-moz-range-thumb {
-    height: 15px;
-    width: 15px;
-    background-color: var(--accent);
-}
-*/
 
 .products-grid {
     display: grid;
@@ -105,7 +86,6 @@
     padding: 50px 15px; 
     column-gap: 35px;
     row-gap: 50px;
-    /* border: 1px solid var(--secondary); */
 }
 
 .products-grid > .product-card {
