@@ -1,6 +1,8 @@
 <?php
     include "Layout/header.php";
-    include "Layout/toast.php";
+    if(isset($_SESSION["login_error"])) {
+        include "./Layout/toast.php";
+    }
     if(isset($_SESSION["user"])){header('Location: ./index.php');}
 ?>
 <div class="center-content">

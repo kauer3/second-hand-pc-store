@@ -29,7 +29,17 @@
     $result = $stmt->get_result();
 
     if($result->fetch_assoc()){
-        $_SESSION["user_exist"] = true;
+        $_SESSION["email"] = $email;
+        $_SESSION["password"] = $password;
+        $_SESSION["firstname"] = $firstname;
+        $_SESSION["lastname"] = $lastname;
+        $_SESSION["address"] = $address;
+        $_SESSION["city"] = $city;
+        $_SESSION["zip"] = $zipcode;
+        $_SESSION["country"] = $country;
+        $_SESSION["phone"] = $phone;
+        $_SESSION['error_message'] = "Email already registered!!!";
+        $_SESSION["register_error"] = true;
         header('Location: ../register.php');
     }
     else{
@@ -43,7 +53,8 @@
             $_SESSION["zip"] = $zipcode;
             $_SESSION["country"] = $country;
             $_SESSION["phone"] = $phone;
-            $_SESSION["error"] = true;
+            $_SESSION["register_error"] = true;
+            $_SESSION['error_message'] = "Passwords do not match!!!";
             header('Location: ../register.php');
             die;
         }

@@ -1,3 +1,6 @@
 <div class="toast-notification">
-    Login credentials are incorrect.
+    <?php if(isset($_SESSION['error_message'])){
+        echo "<p>" . $_SESSION['error_message'] . "</p>";
+        unset($_SESSION['error_message']);
+    }?>
 </div>

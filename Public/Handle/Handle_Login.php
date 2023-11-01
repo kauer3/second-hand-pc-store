@@ -29,12 +29,14 @@
         }
         else {
             $_SESSION["login_error"] = true;
+            $_SESSION['error_message'] = "Email or Password is incorrect!!!";
             $_SESSION["email"] = $email;
             header('Location: ../login.php');
         }
     }
     else{
         $_SESSION["login_error"] = true;
+        $_SESSION['error_message'] = "Email or Password is incorrect!!!";
         $_SESSION["email"] = $email;
         header('Location: ../login.php');
     }

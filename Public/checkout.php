@@ -4,7 +4,7 @@ include "Layout/header.php";
 <div class="center-content">
     <main class="main-content unset-margin form-container">
         <h1 class="main-title">Checkout</h1>
-        <form action="submit">
+        <form action="./Handle/Handle_Checkout.php" method="post">
             <h3 class="subtitle">Shipping</h3>
             <div class="form-input-wrapper form-grid">
                 <div class="form-field">
@@ -72,7 +72,7 @@ include "Layout/header.php";
                 </div>
             </div>
             <h3 class="subtitle payment">Payment</h3>
-            <button class="checkout-submit-button" type="submit">PayPal</button>
+            <button class="checkout-submit-button" type="submit">Place Order</button>
         </form>
     </main>
 </div>

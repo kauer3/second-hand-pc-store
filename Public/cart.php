@@ -18,14 +18,21 @@
                     echo "<span class=\"cart-item-specs\">";
                     echo "$item->specs</span></div>";
                     $priceTotal += $item->price;
+                    $_SESSION["total"] = $priceTotal;
                 }    
-            }
+            
         ?>
         <div class="total-price-container">
             <span class="total-price-label text">Total</span>
-            <span class="total-price text">$<?php echo $priceTotal?></span>
+            <span class="total-price text">$<?php echo $priceTotal;?></span>
         </div>
         <button class="cart-checkout-button" type="button" onclick="document.location.href='checkout.php'">Checkout</button>
+        <?php }
+            else {
+                echo "<div class=\"cart-item\">";
+                echo "<span class=\"cart-item-title text\">There are no items in cart!</span></div>";
+            }
+        ?>
     </div>
 </main>
 <?php
