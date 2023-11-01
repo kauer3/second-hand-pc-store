@@ -9,16 +9,16 @@ include "../Include/Cart.php";
         <div class="images-grid">
             <div class="sub-images">
                 <div class="sub-image square-image-container">
-                    <img src="https://picsum.photos/100" alt="Product Image">
+                    <img src="<?php echo "./Assets/Img/$product->prodID/". $product->prodID ."_1.jpg"?>" alt="Product Image">
                 </div>
                 <div class="sub-image square-image-container">
-                    <img src="https://picsum.photos/200/300" alt="Product Image">
+                    <img src="<?php echo "./Assets/Img/$product->prodID/". $product->prodID ."_2.jpg"?>" alt="Product Image">
                 </div>
                 <div class="sub-image square-image-container">
-                    <img src="https://picsum.photos/300/200" alt="Product Image">
+                    <img src="<?php echo "./Assets/Img/$product->prodID/". $product->prodID ."_3.jpg"?>" alt="Product Image">
                 </div>
                 <div class="sub-image square-image-container">
-                    <img src="https://picsum.photos/400" alt="Product Image">
+                    <img src="<?php echo "./Assets/Img/$product->prodID/". $product->prodID ."_4.jpg"?>" alt="Product Image">
                 </div>
             </div>
             <div class="main-image square-image-container">
